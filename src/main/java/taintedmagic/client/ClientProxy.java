@@ -10,10 +10,12 @@ import net.minecraftforge.client.MinecraftForgeClient;
 import net.minecraftforge.common.MinecraftForge;
 import taintedmagic.client.handler.HUDHandler;
 import taintedmagic.client.renderer.RenderItemKatana;
+import taintedmagic.client.renderer.RenderItemThaumicDisassembler;
 import taintedmagic.client.renderer.RenderTaintBubble;
 import taintedmagic.common.CommonProxy;
 import taintedmagic.common.entities.EntityEldritchOrbAttack;
 import taintedmagic.common.entities.EntityTaintBubble;
+import taintedmagic.common.handler.ConfigHandler;
 import taintedmagic.common.helper.TaintedMagicHelper;
 import taintedmagic.common.helper.Vector3;
 import taintedmagic.common.registry.ItemRegistry;
@@ -34,6 +36,9 @@ public class ClientProxy extends CommonProxy
 
 		// Items
 		MinecraftForgeClient.registerItemRenderer(ItemRegistry.ItemKatana, new RenderItemKatana());
+	    if (!ConfigHandler.disassemblerIcon) {
+	        MinecraftForgeClient.registerItemRenderer(ItemRegistry.ItemThaumicDisassembler, new RenderItemThaumicDisassembler());
+	      }
 	}
 
 	@Override

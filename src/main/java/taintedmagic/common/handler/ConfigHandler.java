@@ -11,6 +11,7 @@ public class ConfigHandler
 	public static boolean useUpdateHandler = true;
 	public static boolean researchTags = true;
 	public static boolean useCustomResearchTabBackground = false;
+	public static boolean disassemblerIcon = false;
 	
 	public static void init ()
 	{
@@ -20,8 +21,9 @@ public class ConfigHandler
 
 		useUpdateHandler = config.getBoolean("use_update_handler", "misc", true, "Should update notifications be enabled?");
 		researchTags = config.getBoolean("research_tags", "research", true, "Setting this to false will disable the '[TaintedMagic]' tag on the research");
-		useCustomResearchTabBackground = config.getBoolean("use_custom_research_tab_background", "research", false, "Setting this to true will enable the old custom tab background");
-
+		useCustomResearchTabBackground = config.getBoolean("use_custom_research_tab_background", "research", true, "Setting this to true will enable the old custom tab background");
+		disassemblerIcon = config.getBoolean("thaumic_disassembler_icon", "misc", false, "Setting this to true will render the Thaumic Disassembler as a flat item icon rather than using the mekanism model.");
+		
 		config.save();
 	}
 }

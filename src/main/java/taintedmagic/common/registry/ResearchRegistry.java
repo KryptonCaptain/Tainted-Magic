@@ -43,7 +43,7 @@ public class ResearchRegistry
 
 	public static void initResearch ()
 	{
-		ResearchCategories.registerCategory(TM, new ResourceLocation("taintedmagic:textures/misc/IconThaumonomiconTab.png"), TaintedMagic.configHandler.useCustomResearchTabBackground ? new ResourceLocation("taintedmagic:textures/gui/GUIThaumonomiconTab.png") : new ResourceLocation("thaumcraft:textures/gui/gui_researchback.png"));
+		ResearchCategories.registerCategory(TM, new ResourceLocation("taintedmagic:textures/misc/tab-icon.old.png"), TaintedMagic.configHandler.useCustomResearchTabBackground ? new ResourceLocation("taintedmagic:textures/gui/GUIThaumonomiconTab.png") : new ResourceLocation("thaumcraft:textures/gui/gui_researchback.png"));
 
 		/**
 		 * Thaumcraft research items
